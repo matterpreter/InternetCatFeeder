@@ -6,15 +6,10 @@ I wanted to have a way to feed my cats while I am out of town, so I started this
 
 Please excuse my clumsy programming :)
 
-**Links to things I've used in this project:**
-Raspberry Pi Model B - http://www.raspberrypi.org/products/model-b/
-
-PicoBorg Reverse - https://www.piborg.org/picoborgrev
-
-Sparkfun 4xAA battery pack - https://www.sparkfun.com/products/12083
-
-Sparkfun NEMA 17 68oz. stepper motor - https://www.sparkfun.com/products/10846
-
-Zevro WM100 dry food dispenser - http://www.amazon.com/WM100-Indispensable-SmartSpace-Wall-Mounted-Dispenser/dp/B0009MGQUC
-
+**Links to things I've used in this project:**  
+Raspberry Pi Model B - http://www.raspberrypi.org/products/model-b/  
+PicoBorg Reverse - https://www.piborg.org/picoborgrev  
+Sparkfun 4xAA battery pack - https://www.sparkfun.com/products/12083  
+Sparkfun NEMA 17 68oz. stepper motor - https://www.sparkfun.com/products/10846  
+Zevro WM100 dry food dispenser - http://www.amazon.com/WM100-Indispensable-SmartSpace-Wall-Mounted-Dispenser/dp/B0009MGQUC  
 Topcoat - http://topcoat.io/topcoat/
