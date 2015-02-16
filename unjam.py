@@ -111,15 +111,3 @@ except KeyboardInterrupt:
     print 'Terminated'
 except:
     logging.warning("[!]Something went wrong at " + feedTime)
-
-    # Start by turning all drives off
-    PBR.MotorsOff()
-    # Rotate -90 then 180 twice to try to unjam the feeder
-    MoveDeg(-90)
-    time.sleep(0.5)
-    MoveDeg(180)
-    time.sleep(0.5)
-    MoveDeg(-90)
-    time.sleep(0.5)
-    MoveDeg(180)
-    PBR.MotorsOff()
