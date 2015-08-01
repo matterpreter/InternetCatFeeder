@@ -91,7 +91,7 @@ try:
     # Start by turning all drives off
     PBR.MotorsOff()
     # Rotate 3 full revolutions
-    MoveDeg(360 * 3)
+    MoveDeg(360 * 9)
     PBR.MotorsOff()
     # Log message to a file.
     logging.info("Large amount dispensed on " + feedTime)
