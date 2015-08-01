@@ -11,7 +11,7 @@ import sys
 # Tell the system how to drive the stepper
 sequence = [[1.0, 1.0], [1.0, -1.0], [-1.0, -1.0], [-1.0, 1.0]]  # Order for stepping
 stepDelay = 0.002                                                # Delay between steps
-degPerStep = 0.18                                                 # Number of degrees moved per step
+degPerStep = 1.8                                                 # Number of degrees moved per step
 stepperVoltage = 3.0
 batteryVoltage = 6.0
 pwmLevel = stepperVoltage / batteryVoltage
