@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: latin-1
 from driver import MoveDeg
+import sys
 import PicoBorgRev
 import logging
 from datetime import datetime
@@ -9,7 +10,7 @@ from optparse import OptionParser
 #Setup arguments
 usage = "Usage: %prog -d <degrees>"
 parser = OptionParser(usage=usage)
-parser.add_option('-m', '--degrees', dest='feedAmount', type='int', \
+parser.add_option('-d', '--degrees', dest='feedAmount', type='int', \
     help='Degrees to turn the stepper.')
 (opts, args) = parser.parse_args()
 feedAmount = opts.feedAmount
