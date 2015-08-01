@@ -12,9 +12,9 @@ import sys
 sequence = [[1.0, 1.0], [1.0, -1.0], [-1.0, -1.0], [-1.0, 1.0]]  # Order for stepping
 stepDelay = 0.002                                                # Delay between steps
 degPerStep = 1.8                                                 # Number of degrees moved per step
-stepperVoltage = 3.0
-batteryVoltage = 6.0
-pwmLevel = stepperVoltage / batteryVoltage
+#stepperVoltage = 3.0
+#batteryVoltage = 6.0
+#pwmLevel = stepperVoltage / batteryVoltage
 
 # Set log file location
 logging.basicConfig(format='%(message)s', filename='feedings.log', level=logging.INFO)
@@ -62,8 +62,8 @@ def MoveStep(count):
         # Set a starting position if this is the first move
         if step == -1:
             drive = sequence[-1]
-            PBR.SetMotor1(drive[0] * pwmLevel)
-            PBR.SetMotor2(drive[1] * pwmLevel)
+            PBR.SetMotor1(drive[0])
+            PBR.SetMotor2(drive[1])
             step = 0
         else:
             step += dir
@@ -77,8 +77,8 @@ def MoveStep(count):
         # For this step set the required drive values
         if step < len(sequence):
             drive = sequence[step]
-            PBR.SetMotor1(drive[0] * pwmLevel)
-            PBR.SetMotor2(drive[1] * pwmLevel)
+            PBR.SetMotor1(drive[0])
+            PBR.SetMotor2(drive[1])
         time.sleep(stepDelay)
         count -= 1
 
