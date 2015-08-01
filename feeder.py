@@ -4,19 +4,28 @@ from driver import MoveDeg
 import PicoBorgRev
 import logging
 from datetime import datetime
+from optparse import OptionParser
+
+#Setup arguments
+usage = "Usage: %prog -d <degrees>"
+parser = OptionParser(usage=usage)
+parser.add_option('-m', '--degrees', dest='feedAmount', type='int', \
+    help='Degrees to turn the stepper.')
+(opts, args) = parser.parse_args()
+feedAmount = opts.feedAmount
+if len(sys.argv) < 1:
+    parser.print_help()
+    sys.exit(1)
 
 # Setup the PicoBorg Reverse
 PBR = PicoBorgRev.PicoBorgRev()
 # PBR.i2cAddress = 0x44                   # Uncomment and change the value if you have changed the board address
 PBR.Init()
 
-# Set log file location
+# Setup logging
 logging.basicConfig(format='%(message)s', filename='feedings.log', level=logging.INFO)
-# Save the current datetime to a variable and format it
 now = datetime.now()
 feedTime = str(now.strftime("%m/%d/%Y at %H:%M:%S"))
-
-feedAmount = raw_input("How many degrees would you like to turn the stepper? ")
 
 try:
     # Start by turning all drives off

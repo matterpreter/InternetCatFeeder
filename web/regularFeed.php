@@ -1,3 +1,3 @@
 <?php
-        system("./regularFeed.py");
+        system("./feeder.py -d 360");
 ?>

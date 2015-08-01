@@ -1,3 +1,3 @@
 <?php
-        system("./largeFeed.py");
+        system("./feeder.py -d 1080");
 ?>
