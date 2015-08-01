@@ -11,5 +11,5 @@ Sparkfun NEMA 23 125oz. stepper motor - https://www.sparkfun.com/products/10847
 Zevro WM100 dry food dispenser - http://www.amazon.com/WM100-Indispensable-SmartSpace-Wall-Mounted-Dispenser/dp/B0009MGQUC  
 Sparkfun 4xAA battery pack - https://www.sparkfun.com/products/12083  
 Sparkfun 1/4" x 4" D-shaft - https://www.sparkfun.com/products/12165  
-Sparkun 1/4" to 1/4" shaft coupler - https://www.sparkfun.com/products/12251  
+Sparkfun 1/4" to 1/4" shaft coupler - https://www.sparkfun.com/products/12251  
 Topcoat - http://topcoat.io/topcoat/
