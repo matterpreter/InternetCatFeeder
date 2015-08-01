@@ -92,7 +92,7 @@ try:
     # Start by turning all drives off
     PBR.MotorsOff()
     # Rotate 1 full revolution
-    MoveDeg(feedAmount)
+    MoveDeg(int(feedAmount))
     PBR.MotorsOff()
     # Log message to a file.
     logging.info("Food dispensed on " + feedTime)
