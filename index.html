@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<link rel="stylesheet" href="css/main.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//use.edgefonts.net/source-sans-pro:n3,n4,n6;source-code-pro:n3.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<body>
+<center>
+<button type="submit" id="regular-feeding" class="topcoat-button">Regular Feeding</button><br><br>
+<button type="submit" id="large-feeding" class="topcoat-button">Large Feeding</button><br><br>
+<button type="submit" id="unjam" class="topcoat-button">Unjam the Feeder</button><br><br><br><br>
+<button onclick="window.location.href='feedings.log'" type="button" id="feedlog" class="topcoat-button">View Feeding Log</button>
+</center>
+<script>
+function regularFeeding() {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+                alert('Cats fed a regular amount!');
+            } else {
+                alert('Something went wrong...');
+            }
+        }
+    };
+    request.open('GET', '/cgi-bin/regularFeed.py', true);
+    request.send(null);
+    return false;  // Prevent the default button action
+};
+
+function largeFeeding() {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+                alert('Cats fed a large amount!');
+            } else {
+                alert('Something went wrong...');
+            }
+        }
+    };
+    request.open('POST', '/cgi-bin/largeFeed.py', true);
+    request.send(null);
+    return false;  // Prevent the default button action
+};
+
+function unjamFeeder() {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+                alert('Tried to unjam the feeder');
+            } else {
+                alert('Something went wrong...');
+            }
+        }
+    };
+    request.open('POST', '/cgi-bin/unjam.py', true);
+    request.send(null);
+    return false;  // Prevent the default button action
+};
+
+document.getElementById('regular-feeding').onclick = regularFeeding;
+document.getElementById('large-feeding').onclick = largeFeeding;
+document.getElementById('unjam').onclick = unjamFeeder;
+</script>
+</body>
+</html>
