@@ -1,4 +1,7 @@
 # Internet Cat Feeder
+
+Update 2019 - Abandoning as these have become available commercially at a much better price point than when I originally started this project.
+
 Raspberry Pi internet-enabled cat feeder using the PicoBorg Reverse.    
 
 I wanted to have a way to feed my cats while I am out of town, so I started this project. A Raspberry Pi is connected to a PicoBorg Reverse which is then connected to a battery pack and a 125oz. stepper motor. The stepper will be connected to a dry food dispenser to turn the handle the specified amount (currently 1080 deg for normal and 2160 for "large") or attempt to unjam the feeder. Please note that I do not recommend opening this up to the internet quite yet unless you want to have the whole world feed your cats (or worse).
